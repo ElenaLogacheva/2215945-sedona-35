@@ -141,14 +141,22 @@ list-style-type: none;
   margin-top: 25px;
   margin-bottom: 90px;
 }
+
+
 .advantages-list {
+  /*
   display: flex;
-  width: 1200px;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  */
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  width: 1200px;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item {
@@ -173,9 +181,26 @@ list-style-type: none;
 }
 
 .advantages-item-first {
+  grid-column: 1/-1;
+  grid-row: 1/2;
   display: flex;
   width: 1200px;
   align-items: center;
+}
+
+.advantages-item-second {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.advantages-item-third {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.advantages-item-fourth {
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 .advantages-item-landscape{
   width: 400px;
@@ -232,12 +257,16 @@ list-style-type: none;
 }
 
 .recommendation-list {
-display: flex;
-width: 1200px;
-justify-content: space-between;
-margin: 0;
-padding: 0;
-list-style-type: none;
+  /*
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  */
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .recommendation-item {
@@ -246,6 +275,18 @@ list-style-type: none;
   background-color: rgba(131, 179, 211, 0.12);
   text-align: center;
   text-transform: none;
+}
+
+.recommendation-item-first {
+  grid-column: 1/2;
+}
+
+.recommendation-item-second {
+  grid-column: 2/3;
+}
+
+.recommendation-item-third {
+  grid-column: 3/4;
 }
 
 .recommendation-title {
@@ -266,7 +307,6 @@ list-style-type: none;
   background-color:  #FFFFFF;
   text-align: center;
 }
-
 .booking {
   font-size: 22px;
   line-height: 26px;
@@ -308,12 +348,14 @@ list-style-type: none;
   padding-bottom: 104px;
 }
 
+
 .subscription-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 
 .subscription button {
   font-family: "PT Sans", sans-serif;
